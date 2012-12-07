@@ -5,15 +5,25 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
                    0.15 0.45 0.0 0.9 0.0 0.225 false;
                    0.1 0.275 0.125 0.35 0.0 1.0 false;
                   ];
-
+    USE_COMPOSITE_FILTER = false;
+    
     banana_filter = [0.12 0.25 0.5 1.0 0.45 1.0 false];
     apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false;
         0.925 0.1 0.5 1.0 0.05 1.0 false];
     orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false;
         0.06 0.12 0.6 1.0 0.45 0.95 false];
-
     fruits = {'banana';'apple'; 'orange'};
-    list_fruitmask = {banana_filter; apple_filter; orange_filter};
+    
+    if USE_COMPOSITE_FILTER
+        list_fruitmask = {
+            buildCompositeFilter(banana_filter, [apple_filter; orange_filter]);
+            buildCompositeFilter(apple_filter, [banana_filter; orange_filter]);
+            buildCompositeFilter(orange_filter, [apple_filter; banana_filter])
+            };
+    else
+        list_fruitmask = {banana_filter; apple_filter; orange_filter};
+    end
+    
     fruit_filters = containers.Map(fruits, list_fruitmask);
 
 
