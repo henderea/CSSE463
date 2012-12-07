@@ -7,9 +7,9 @@ neg_filters = [0 1 0.275 0.425 0.1 0.45 false;
                0.1 0.275 0.125 0.35 0.0 1.0 false;
               ];
 
-banana_filter = [0.125 0.225 0.65 0.8 0.6 1.0 false];
-apple_filter = [0.925 0.1 0.6 1.01 0.05 0.5 false];
-orange_filter = [0.0775 0.1071 0.8107 0.9152 0.5977 0.8256 false];
+banana_filter = [0.12 0.25 0.5 1.0 0.45 1.0 false];
+apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false];
+orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false];
 
 fruits = {'banana';'apple'; 'orange'};
 list_fruitmask = {banana_filter; apple_filter; orange_filter};
