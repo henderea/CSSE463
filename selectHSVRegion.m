@@ -1,7 +1,7 @@
 % Select a region and returns the min/max Hue, Saturation, and Value
 
 % Image is RGB! 
-function [h,s,v] = selectHSVRegion(image)
+function [h,s,v,stdmask] = selectHSVRegion(image)
     figure, imshow(image); 
     reg = impoly; 
     wait(reg);
@@ -20,7 +20,7 @@ function [h,s,v] = selectHSVRegion(image)
     h = [min(h_masked(:)) mean(h_masked(:)) std(h_masked(:)) max(h_masked(:))];
     s = [min(s_masked(:)) mean(s_masked(:)) std(s_masked(:)) max(s_masked(:))];
     v = [min(v_masked(:)) mean(v_masked(:)) std(v_masked(:)) max(v_masked(:))];
-
+    stdmask = [mean(h_masked(:)) - std(h_masked(:)) mean(h_masked(:)) + std(h_masked(:)) mean(s_masked(:)) - std(s_masked(:)) mean(s_masked(:)) + std(s_masked(:)) mean(v_masked(:)) - std(v_masked(:)) mean(v_masked(:)) + std(v_masked(:))];
     % Show the mask, masked image, and histograms
     figure, imshow(mask); figure, imshow(hsv2rgb(masked_img));
     figure, imhist(h_masked);
