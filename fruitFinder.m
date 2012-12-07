@@ -7,8 +7,10 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
                   ];
 
     banana_filter = [0.12 0.25 0.5 1.0 0.45 1.0 false];
-    apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false];
-    orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false];
+    apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false;
+        0.925 0.1 0.5 1.0 0.05 1.0 false];
+    orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false;
+        0.06 0.12 0.6 1.0 0.45 0.95 false];
 
     fruits = {'banana';'apple'; 'orange'};
     list_fruitmask = {banana_filter; apple_filter; orange_filter};
