@@ -1,4 +1,4 @@
-function [c_x,c_y] = getCentroid(mask)
+function pt = getCentroid(mask)
     fnd = find(mask == 1);
     t_x = 0;
     t_y = 0;
@@ -9,4 +9,5 @@ function [c_x,c_y] = getCentroid(mask)
     end
     c_x = t_x/size(fnd,1);
     c_y = t_y/size(fnd,1);
+    pt = [c_x c_y];
 end

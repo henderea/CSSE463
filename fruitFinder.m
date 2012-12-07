@@ -30,17 +30,17 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
         ckey = char(key);
 
         % Create/process the mask
-        fruit_masks(ckey) = processMask(mask, makeMultiMaskFromRGB(img, fruit_filters(ckey)));
+        f_mask = processMask(mask, makeMultiMaskFromRGB(img, fruit_filters(ckey)));
 
         % Get the basic labeling from bwlabel
-        labeled_masks = createRegionMasks(bwlabel(fruit_masks(ckey)));
+        labeled_masks = createRegionMasks(bwlabel(f_mask));
         
         % Get the average size
-        masks_area = mapMasks(labeled_masks, @(x) sum(sum(x)))
+        masks_area = mapMasks(labeled_masks, 1, @(x) sum(sum(x)))
         average_size = mean(masks_area)
         filtered_masks = filterMasks(labeled_masks, @(x) (sum(sum(x)) > average_size / 4) & (sum(sum(x)) < average_size * 4));
         fruit_count(ckey) = size(filtered_masks, 3);
+        fruit_centroids(ckey) = mapMasks(filtered_masks, 2, @getCentroid);
+        fruit_masks(ckey) = reduceMasks(filtered_masks, zeros(size(filtered_masks, 1), size(filtered_masks, 2)), @or);
     end
-
-
 end
