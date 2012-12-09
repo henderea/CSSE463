@@ -135,5 +135,16 @@ At this point, each mask contains a single connected region. However, there are 
 \item Close operator using a 3x3 diamond (equivalent to four-neighborhood)
 \end{enumerate}
 
+\section{Results}
+For the first image, \texttt{mixed\_fruit1.tiff}, we were able to successfully identify the correct number of fruits. 
+
+\section{Future Work}
+There are various techniques that we could use to improve our technique in the future.
+\subsection{Canny-inspired Adaptive Two-Level Thresholding}
+One potential idea would be to use multi-level thresholding as a way of capturing more area of the fruits while limiting the amount of additional erroneous data being introduced. The primary idea is to use a ``high" threshold to pick out regions that have a high probability of being a fruit, then a ``low" threshold would be applied to the neighbors of those ``high" threshold pixels and then to other neighboring ``low" pixels. This would allow those high probability areas to ``grow" out and encapsulate the entire fruit.
+\subsection{Contrast Improvement}
+Another potential idea would be to increase the contrast of the image after applying the thresholds to remove the background. This would allow our technique to have a larger difference between neighboring colors, such as the case with the red in the apples, the orange in the oranges, and the yellow in the bananas, which are neighboring colors in the hue band of HSV.    
+\subsection{Shape/Edge Detection}
+Another potential idea would be to use edge detection to pick out regions that could potentialy be a fruit and use shape detection to determine the type of fruit. This could have better results when combined with color. 
 
 \end{document}
