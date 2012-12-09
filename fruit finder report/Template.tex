@@ -3,6 +3,7 @@
 %          IEEEbib.bst - IEEE bibliography style file.
 % --------------------------------------------------------------------------
 \documentclass{article}
+\usepackage{graphicx}
 \usepackage{spconf_ICME,amsmath,epsfig,fancyhdr}
 \setlength{\paperwidth}{215.9mm} \setlength{\hoffset}{-9.7mm}
 \setlength{\oddsidemargin}{0mm} \setlength{\textwidth}{184.3mm}
@@ -136,7 +137,277 @@ At this point, each mask contains a single connected region. However, there are 
 \end{enumerate}
 
 \section{Results}
-For the first image, \texttt{mixed\_fruit1.tiff}, we were able to successfully identify the correct number of fruits. 
+\subsection{mixed\_fruit1.tiff}
+For the first image, \texttt{mixed\_fruit1.tiff}, we were able to successfully identify the correct number of fruits.
+\subsubsection{Data}
+Apple (7 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+143.3259 & 91.8101 & 316\\
+\hline
+48.3462 & 129.7372 & 312\\
+\hline
+208.7509 & 196.4874 & 277\\
+\hline
+186.0201 & 246.1253 & 447\\
+\hline
+218.3883 & 330.7949 & 273\\
+\hline
+60.6172 & 446.1513 & 337\\
+\hline
+65.4917 & 477.8017 & 242\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Banana (6 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+218.5945 & 159.2760 & 587\\
+\hline
+52.0207 & 230.0284 & 387\\
+\hline
+55.4043 & 272.9688 & 512\\
+\hline
+242.5063 & 387.5781 & 474\\
+\hline
+279.2613 & 497.4947 & 750\\
+\hline
+187.6559 & 602.1696 & 401\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Orange (7 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+143.6724 & 64.2783 & 406\\
+\hline
+187.7799 & 272.5670 & 418\\
+\hline
+231.4619 & 280.6571 & 420\\
+\hline
+53.6546 & 376.9342 & 304\\
+\hline
+200.0660 & 409.3198 & 394\\
+\hline
+202.3764 & 445.0029 & 348\\
+\hline
+179.7903 & 566.8041 & 434\\
+\hline
+\end{tabular}
+
+\subsubsection{Images}
+Original image\\~\\
+\includegraphics[width=2in]{mixed_fruit1.png}\\~\\
+Original mask\\~\\
+\includegraphics[width=2in]{mixed_fruit1_step1.png}\\~\\
+Clean mask\\~\\
+\includegraphics[width=2in]{mixed_fruit1_step2.png}\\~\\
+
+\subsection{mixed\_fruit2.tiff}
+For the second image, \texttt{mixed\_fruit2.tiff}, we were able to successfully identify the correct number of bananas and oranges, but detected an extra apple. 
+\subsubsection{Data}
+Apple (7 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+369.5518 & 160.4705 & 1932\\
+\hline
+319.0113 & 266.0188 & 1864\\
+\hline
+437.8009 & 270.6967 & 211\\
+\hline
+44.5030 & 284.1810 & 1000\\
+\hline
+407.1295 & 324.2635 & 1985\\
+\hline
+94.5485 & 484.9597 & 1537\\
+\hline
+284.8667 & 596.4200 & 300\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Banana (6 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+388.4214 & 68.4231 & 2361\\
+\hline
+176.4266 & 64.5710 & 2494\\
+\hline
+289.7583 & 195.3878 & 2437\\
+\hline
+290.3219 & 343.8662 & 2653\\
+\hline
+175.9601 & 467.8580 & 2557\\
+\hline
+319.9872 & 563.1305 & 2352\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Orange (6 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+92.3523 & 58.6880 & 1388\\
+\hline
+33.0721 & 234.4446 & 1498\\
+\hline
+412.9493 & 268.4607 & 2229\\
+\hline
+414.2446 & 391.5243 & 2081\\
+\hline
+419.1797 & 511.5228 & 2215\\
+\hline
+266.6702 & 586.3969 & 1716\\
+\hline
+\end{tabular}
+
+\subsubsection{Images}
+Original image\\~\\
+\includegraphics[width=2in]{mixed_fruit2.png}\\~\\
+Original mask\\~\\
+\includegraphics[width=2in]{mixed_fruit2_step1.png}\\~\\
+Clean mask\\~\\
+\includegraphics[width=2in]{mixed_fruit2_step2.png}\\~\\
+
+\subsection{mixed\_fruit3.tiff}
+For the third image, \texttt{mixed\_fruit3.tiff}, we were able to successfully identify the correct number of apples, but there was an extra banana and an extra orange.
+\subsubsection{Data}
+Apple (8 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+299.3567 & 36.1389 & 5657\\
+\hline
+201.2441 & 59.2207 & 639\\
+\hline
+418.7965 & 148.1597 & 5542\\
+\hline
+287.5883 & 161.4418 & 3619\\
+\hline
+175.9445 & 184.4902 & 3874\\
+\hline
+176.0630 & 461.1911 & 2365\\
+\hline
+298.6333 & 466.7226 & 3079\\
+\hline
+383.6635 & 539.9577 & 4583\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Banana (7 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+227.2263 & 99.3108 & 5476\\
+\hline
+242.3035 & 262.0122 & 4913\\
+\hline
+76.8940 & 241.2440 & 5501\\
+\hline
+297.6278 & 293.5087 & 1150\\
+\hline
+160.2507 & 389.4048 & 5034\\
+\hline
+61.9554 & 491.2378 & 4579\\
+\hline
+232.1099 & 575.9033 & 5004\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Orange (8 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+165.8371 & 47.7669 & 3886\\
+\hline
+199.9871 & 133.1239 & 1162\\
+\hline
+357.5691 & 190.3717 & 4651\\
+\hline
+179.8290 & 280.9192 & 3912\\
+\hline
+333.2355 & 277.6628 & 1210\\
+\hline
+304.6516 & 325.1719 & 1309\\
+\hline
+242.8631 & 424.1327 & 4018\\
+\hline
+362.9017 & 456.0160 & 5067\\
+\hline
+\end{tabular}
+
+\subsubsection{Images}
+Original image\\~\\
+\includegraphics[width=2in]{mixed_fruit3.png}\\~\\
+Original mask\\~\\
+\includegraphics[width=2in]{mixed_fruit3_step1.png}\\~\\
+Clean mask\\~\\
+\includegraphics[width=2in]{mixed_fruit3_step2.png}\\~\\
+
+\subsection{fruit\_tray.tiff}
+For the fourth image, \texttt{fruit\_tray.tiff}, we were able to successfully identify the correct number of fruits.
+\subsubsection{Data}
+Apple (8 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+310.8944 & 111.0427 & 1477\\
+\hline
+164.9810 & 138.8308 & 1897\\
+\hline
+264.5828 & 162.8235 & 2368\\
+\hline
+373.3612 & 196.3010 & 299\\
+\hline
+124.6049 & 220.7136 & 405\\
+\hline
+203.7126 & 221.0749 & 414\\
+\hline
+265.7575 & 288.9318 & 763\\
+\hline
+228.2927 & 438.5954 & 2108\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Banana (1 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+82.9100 & 212.5757 & 667\\
+\hline
+\end{tabular}
+~\\~\\~\\
+Orange (1 found)\\~\\
+\begin{tabular}{ | r | r | r | }
+\hline
+\textbf{X} & \textbf{Y} & \textbf{Size}\\
+\hline
+229.4551 & 126.0366 & 12867\\
+\hline
+\end{tabular}
+
+\subsubsection{Images}
+Original image\\~\\
+\includegraphics[width=2in]{fruit_tray.png}\\~\\
+Original mask\\~\\
+\includegraphics[width=2in]{fruit_tray_step1.png}\\~\\
+Clean mask\\~\\
+\includegraphics[width=2in]{fruit_tray_step2.png}\\~\\
 
 \section{Future Work}
 There are various techniques that we could use to improve our technique in the future.
