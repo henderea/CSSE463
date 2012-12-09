@@ -1,6 +1,6 @@
 % The whole shebang
 
-function [fruit_masks, fruit_count, fruit_centroids fruit_sizes] = fruitFinder(img)
+function [fruit_masks, fruit_count, fruit_centroids, fruit_sizes] = fruitFinder(img)
     neg_filters = [0 1 0.275 0.425 0.1 0.45 false;
                    0.15 0.45 0.0 0.9 0.0 0.225 false;
                    0.1 0.275 0.125 0.35 0.0 1.0 false;
@@ -9,10 +9,8 @@ function [fruit_masks, fruit_count, fruit_centroids fruit_sizes] = fruitFinder(i
     USE_COMPOSITE_FILTER = false;
     
     banana_filter = [0.12 0.25 0.5 1.0 0.45 1.0 false];
-    apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false;
-        0.925 0.1 0.5 1.0 0.05 1.0 false];
-    orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false;
-        0.06 0.12 0.6 1.0 0.45 0.95 false];
+    apple_filter = [0.925 0.1 0.6 1.0 0.05 0.5 false];
+    orange_filter = [0.06 0.11 0.6 1.0 0.5 0.95 false];
     fruits = {'banana';'apple'; 'orange'};
     
     if USE_COMPOSITE_FILTER
