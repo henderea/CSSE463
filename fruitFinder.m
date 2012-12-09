@@ -5,6 +5,7 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
                    0.15 0.45 0.0 0.9 0.0 0.225 false;
                    0.1 0.275 0.125 0.35 0.0 1.0 false;
                   ];
+              
     USE_COMPOSITE_FILTER = false;
     
     banana_filter = [0.12 0.25 0.5 1.0 0.45 1.0 false];

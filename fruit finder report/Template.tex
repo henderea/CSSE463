@@ -54,24 +54,17 @@
 
 %
 \begin{abstract}
-The abstract should appear at the top of the left-hand column of
-text, about 0.5 inch (12 mm) below the title area and no more than
-3.125 inches (80 mm) in length.  Leave a 0.5 inch (12 mm) space
-between the end of the abstract and the beginning of the main text.
-The abstract should contain 2000 characters maximum, and should be
-identical to the abstract of the manuscript submitted
-electronically. All manuscripts must be in English and printed in
-black ink.
+
 \end{abstract}
 %
 \begin{keywords}
-One, two, three, four, five
+image classification,thresholding,median filtering
 \end{keywords}
 %
 \section{Introduction}
 \label{sec:intro}
 
-The subject of this paper is an application that will find and classify fruit in images.
+The subject of this paper is an application that will find and classify fruit in a given set of images.
 The fruits supported are \textbf{apples}, \textbf{bananas}, and \textbf{oranges}.
 
 
@@ -82,9 +75,24 @@ The fruits supported are \textbf{apples}, \textbf{bananas}, and \textbf{oranges}
 
 The first step in finding the fruit is to convert the image to the HSV image space.  Then, simple thresholding is used to remove the background from the image.  Next, thresholding is used again, but this time to find individual types of fruit.  These initial fruit masks are enhanced by using morphological operators, such as erosion and dilation, as well as a median filter.  After obtaining a mask of each fruit, connected objects can be used to find separate pieces of fruit.  To filter out any noise that may have gotten past the filtering, the area of each connected region is computed in order to determine any outliers.  These outliers are then removed.  Finally, the centroid of each piece of fruit and the number of pieces of each type are calculated.
 
-\subsection{Filters}
+\subsection{Thresholding}
+Our technique involves using two different levels of thresholding: a threshold to remove the background of the image and then a set of thresholds to find the different fruits. This technique allows the foreground filters (for finding the fruits) to be less selective, as those filters will not have to deal with false-positives in the background.
+
+\subsection{Enhancing the mask}
+After thresholding, there is a rough mask of the area where the fruit is. However, these masks contain a significant amount of noise. Our technique uses two methods to reduce the impact of this noise prior to finding regions: a median filter and morphological operations. 
+
+First, a median filter, using a 5x5 square, is applied. The median filter is suitable for ``salt and pepper" noise, which we determined was one of the more common types of noise seen in thresholded images. Next, a morphological close operation, consisting of an erosion and dilation, is applied to the image using a 3x3 diamond, equivalent to a four-neighborhood. After these operations, the mask is relatively free of major noise and holes.
+
+\subsection{Finding connected regions}
+After the mask is enhanced, our technique will find the connected regions within the image using MATLAB's \texttt{bwlabel} using a four-neighborhood. \texttt{bwlabel} returns a matrix consisting of 0, 1, ..., n in each cell, corresponding to the regions. These regions are then split up into individual masks and normalized into binary masks. 
+
+\subsection{Removing more noise}
+At this point, each mask contains a single connected region. However, there are still some regions that correspond to noise in the mask. To reduce this noise further, our technique will then calculate the average area of each mask and removes those masks which has an area significantly smaller or larger than the average region size. This concludes the processing of the masks by our technique. 
+
+\section{Training data}
+\subsection{Thresholding values}
 \label{subsec:process:filters}
-\subsubsection{Background capturing filters}
+\subsubsection{Background capturing thresholds}
 \label{subsubsec:process:filters:background}
 ~\\
 \textbf{Filter 1}
@@ -102,7 +110,7 @@ The first step in finding the fruit is to convert the image to the HSV image spa
 \[0.125 <= S <= 0.350\]
 \[0.000 <= V <= 1.000\]\\
 
-\subsubsection{Fruit capturing filters}
+\subsubsection{Fruit capturing thresholds}
 \label{subsubsec:process:filters:fruit}
 ~\\
 \textbf{Apple}
@@ -123,276 +131,9 @@ The first step in finding the fruit is to convert the image to the HSV image spa
 \subsection{Filters and Morphological Operators}
 \label{subsec:process:filtmorph}
 \begin{enumerate}
-\item Median filter (5x5)
-\item Close operator (3x3 diamond)
+\item Median filter using a 5x5 square
+\item Close operator using a 3x3 diamond (equivalent to four-neighborhood)
 \end{enumerate}
 
-\section{Title Page}
-\label{sec:pagestyle}
-
-The paper title (on the first page) should begin 1.38 inches (35 mm)
-from the top edge of the page, centered, completely capitalized, and
-in Times 14-point, boldface type. Your name and affiliation should
-be included for this camera-ready submission.
-
-
-
-\subsection{\LaTeX~Users}
-If you are using \LaTeX, make sure Line 17 of ``Template.tex'' is
-uncommented when generating your camera-ready paper. The authors'
-name(s) and affiliation(s) should appear in the camera-ready
-submission. In this case simply key in the authors' names and
-affiliations in line 40 if you are using \LaTeX.
-
-\subsection{Microsoft Word Users}
-If you are using Microsoft Word, please enter your name and
-affiliation below the title of your paper.
-
-\section{COPYRIGHT NOTICE}
-The appropriate copyright notice should appear at the bottom of the
-first page of each paper. For \LaTeX users, you can change this at
-Line 48 of the ``Template.tex'' file.
-
-\subsection{Authors employed by the US government}
-For papers in which all authors are employed by the US government,
-the notice is ``U.S. Government work not protected by U.S.
-copyright''.
-
-\subsection{Authors employed by a Crown government}
-For papers in which all authors are employed by a Crown government
-(U.K., Canada and Australia), the notice is
-``978-1-4244-7493-6/10/\$26.00 \copyright2010 Crown''.
-
-
-\subsection{All other papers}
-For all other papers, the notice is ``978-1-4244-7493-6/10/\$26.00
-\copyright2010 IEEE''.
-
-\subsection{Copyright Forms} \label{sec:copyright}
-
-You must include your fully completed IEEE copyright release form
-when you submit your camera-ready paper. This form must be completed
-\emph{electronically} and submitted via the ICME2010 paper
-submission system before your paper can be published in the
-proceedings. Details of electronic copyright form submission can be
-found on the website \verb"http://www.icme2010.org/authorguide.html"
-.
-
-
-\section{TYPE-STYLE AND FONTS}
-\label{sec:typestyle}
-
-To achieve the best rendering both in the proceedings and from the
-CD-ROM, you are strongly encouraged to use Times New Roman font.  In
-addition, this will give the proceedings a more uniform look.  Use a
-font that is no smaller than nine point type throughout the paper,
-including figure captions.
-
-In nine point type font, capital letters are 2~mm high.  If you use
-the smallest point size, there should be no more than 3.2~lines/cm
-(8~lines/inch) vertically.  This is a minimum spacing; 2.75~lines/cm
-(7~lines/inch) will make the paper much more readable.  Larger type
-sizes require correspondingly larger vertical spacing.  Please
-adhere to the vertical spacing of this template and do not
-double-space your paper. True-Type~1 fonts are preferred.
-
-The first paragraph in each section should not be indented, but all the
-following paragraphs within the section should be indented as these paragraphs
-demonstrate.
-
-\subsection{Embedding Fonts}
-\label{sec:embedFonts}
-
-All submissions must be in PDF. It is important to make sure that
-all fonts are embedded. This will ensure that reviewers will be able
-to read your manuscript independent of his/her system. You should
-check if all your fonts are embedded via Adobe Acrobat under the
-following menu ``\emph{File$>$Properties$>$Fonts}.'' If any fonts
-are not embedded, start your Acrobat Distiller then
-``\emph{Settings$>$Job Options$>$Fonts$>$Embed All Fonts}.''
-
-Alternatively, if you are using Acrobat Professional, go to
-``\emph{Edit$>$Preferences$>$Convert to PDF$>$ Microsoft Office
-Word$>$ Edit Settings$>$ Edit$>$ Fonts}.'' Then make sure all the
-fonts listed in the ``\emph{Font Source}'' dialogue box is added to
-the ``\emph{Always Embed}'' dialogue box. Finally click ``\emph{Save
-As...}'' and give it a file name. The next time you print any
-figures or text to PDF via Microsoft Word or Visio, print them using
-the file name you specified. This file name can be specified under
-``\emph{Properties}'' in printing settings.
-
-
-
-\section{MAJOR HEADINGS}
-\label{sec:majhead}
-
-Major headings, for example, ``1. Introduction'', should appear in
-all capital letters, bold face if possible, centered in the column,
-with one blank line before, and one blank line after. Use a period
-(``.'') after the heading number, not a colon. For \LaTeX users,
-section numberings will automatically be formatted.
-
-\subsection{Subheadings}
-\label{ssec:subhead}
-
-Subheadings should appear in lower case (initial word capitalized) in
-boldface.  They should start at the left margin on a separate line.
-
-\subsubsection{Sub-subheadings}
-\label{sssec:subsubhead}
-
-Sub-subheadings, as in this paragraph, are strongly discouraged.
-However, if you must use them, they should appear in lower case
-(initial word capitalized) and start at the left margin on a
-separate line, with paragraph text beginning on the following line.
-They should be in italics.
-
-
-\section{LENGTH}
-\label{sec:length}
-
-All papers must not exceed \emph{six} pages. Over-length papers will
-not be published. Note that all pages must adhere to the margins
-described in Section~\ref{sec:format}.
-
-
-\section{PAPER SUBMISSION AND FILENAME}
-\label{sec:paperSub}
-
-All papers must be printed to PDF. This means that you should print
-your manuscript to PDF regardless of whether you are using \LaTeX or
-Miscrosoft Word Template.
-
-In addition, all camera-ready PDFs \emph{must be} IEEE
-Xplore-compatible. To check whether your PDF file is IEEE
-Xplore-compatible, please visit \verb"www.pdf-express.org/" . You
-can also use the above link to convert your source file(s) to IEEE
-Xplore-compatible PDF. The ``Conference ID'' is ``icme10x''.
-
-Please remember to upload the PDF generated from PDF eXpress to the
-ICME 2010 submission site. The filename \emph{must be} in the form
-of ``xxxx.pdf'' where ``xxxx'' are the four-digit Paper ID.
-
-
-\section{PAGE NUMBERING}
-\label{sec:page}
-
-Please do {\bf not} paginate your paper.  Page numbers, session numbers, and
-conference identification will be inserted when the paper is included in the
-proceedings.
-
-% Below is an example of how to insert images. Delete the ``\vspace'' line,
-% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-% with a suitable PostScript file name.
-% -------------------------------------------------------------------------
-%
-\begin{figure}[t]
-\begin{minipage}[b]{1.0\linewidth}
-  \centering
-% \centerline{\epsfig{figure=image1.ps,width=8.5cm}}
-  \vspace{2.0cm}
-  \centerline{(a) Result 1}\medskip
-\end{minipage}
-%
-\begin{minipage}[b]{.48\linewidth}
-  \centering
-% \centerline{\epsfig{figure=image3.ps,width=4.0cm}}
-  \vspace{1.5cm}
-  \centerline{(b) Results 2}\medskip
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.48\linewidth}
-  \centering
-% \centerline{\epsfig{figure=image4.ps,width=4.0cm}}
-  \vspace{1.5cm}
-  \centerline{(c) Result 3}\medskip
-\end{minipage}
-%
-\caption{Example of placing a figure with experimental results.}
-\label{fig:res}
-\end{figure}
-
-\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-\label{sec:illust}
-
-Illustrations must appear within the designated margins.  They may
-span the two columns.  If possible, position illustrations at the
-top of the columns, rather than in the middle or at the bottom.
-Caption and number every illustration. All halftone illustrations
-must be clear black and white prints.
-
-Since there are many ways, often incompatible, of including images
-(e.g., with experimental results) in a \LaTeX document.
-Figure~\ref{fig:res} shows you an example of how to do this.
-
-
-\section{TABLES and EQUATIONS}
-\label{sec:tabEqn}
-
-Tables and important equations must be centered in the column.
-Table~\ref{tab:cap} shows an example of a table while the equation
-\begin{eqnarray}
-y &=& ax^2+bx+c
-\nonumber
-\\
-~ &=& (x+p)(x+q)
-\end{eqnarray}
-shows an example of an equation layout.
-
-\begin{table}[t]
-\begin{center}
-\caption{Table caption} \label{tab:cap}
-\begin{tabular}{|c|c|c|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Column One & Column Two & Column Three
-  \\
-  \hline
-  Cell 1 & Cell 2 & Cell 3 \\
-  Cell 4 & Cell 5 & Cell 6 \\
-  \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-Large tables or long equations may span across both columns. Any
-table or equation that takes up more than one column width must be
-positioned either at the top or at the bottom of the page.
-
-
-
-\section{FOOTNOTES}
-\label{sec:foot}
-
-Use footnotes sparingly and write them at the bottom of the column
-on the page where they are referenced. Use Times New Roman 9-point
-type, single-spaced. To help your readers, avoid using footnotes
-altogether but include any necessary observations in the text
-(within parentheses, if you prefer, as in this sentence).
-
-
-
-\section{CITATIONS and REFERENCES}
-\label{sec:review}
-
-Citation of your own work is now allowed in this camera-ready
-submission. You can now use phrases such as ``\emph{In previous
-works [20], we have proposed...}''
-
-List and number all bibliographical references at the end of the
-paper. The references can be numbered in alphabetic order or in
-order of appearance in the document. When referring to them in the
-text, type the corresponding reference number in square brackets as
-shown at the end of this sentence. All citations must be adhered to
-IEEE format and style. Examples such
-as~\cite{Morgan2005},~\cite{cooley65} and~\cite{haykin02} are given
-in Section 14.
-
-% References should be produced using the bibtex program from suitable
-% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
-% style file from IEEE produces unsorted bibliography list.
-% -------------------------------------------------------------------------
-\bibliographystyle{IEEEbib}
-\bibliography{myRef}
 
 \end{document}
