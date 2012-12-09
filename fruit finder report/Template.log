@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.12.9)  9 DEC 2012 13:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.12.9)  9 DEC 2012 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -244,27 +244,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[2] (./Template.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2] (./Template.aux) ) 
 Here is how much of TeX's memory you used:
  2371 strings out of 493488
  31767 string characters out of 3141326
- 92858 words of memory out of 3000000
+ 92880 words of memory out of 3000000
  5644 multiletter control sequences out of 15000+200000
  21490 words of font info for 48 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,11n,43p,775b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dis
-t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/
+8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-di
+st/fonts/type1/urw/times/utmri8a.pfb>
 Output written on Template.pdf (2 pages, 78862 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)

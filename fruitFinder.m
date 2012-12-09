@@ -1,6 +1,6 @@
 % The whole shebang
 
-function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
+function [fruit_masks, fruit_count, fruit_centroids fruit_sizes] = fruitFinder(img)
     neg_filters = [0 1 0.275 0.425 0.1 0.45 false;
                    0.15 0.45 0.0 0.9 0.0 0.225 false;
                    0.1 0.275 0.125 0.35 0.0 1.0 false;
@@ -35,6 +35,7 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
     fruit_masks = containers.Map;
     fruit_count = containers.Map;
     fruit_centroids = containers.Map;
+    fruit_sizes = containers.Map;
 
     % Create and process the fruit-channel masks
     for key = keys(fruit_filters)
@@ -55,5 +56,6 @@ function [fruit_masks, fruit_count, fruit_centroids] = fruitFinder(img)
         fruit_count(ckey) = size(filtered_masks, 3);
         fruit_centroids(ckey) = mapMasks(filtered_masks, 2, @getCentroid);
         fruit_masks(ckey) = reduceMasks(filtered_masks, zeros(size(filtered_masks, 1), size(filtered_masks, 2)), @or);
+        fruit_sizes(ckey) = mapMasks(filtered_masks, 1, @(x) sum(sum(x)));
     end
 end
