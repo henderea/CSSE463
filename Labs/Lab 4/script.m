@@ -1,2 +1,5 @@
 % Open the image
-img = imread('images/original_image.png');
+img = imread('images/shapes.png');
+
+% Run bwlabel and split into separate masks for each shape
+shapes = createRegionMasks(bwlabel(img, 4));
