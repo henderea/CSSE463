@@ -14,8 +14,6 @@ function vector = calculateFeatureVector(src, numBlocks)
             beginY = (y_segment * (j - 1) + 1);
             endY = (y_segment * j);
             
-            fprintf('Region: %d-%d, %d-%d on %dx%d', beginX, endX, beginY, endY, size(src, 1), size(src, 2));
-            
             % Separate out the regions for L/S/T bands
             LReg = src(beginX:endX, beginY:endY, 1);
             SReg = src(beginX:endX, beginY:endY, 2);
