@@ -1,4 +1,4 @@
-function [x, y] = calculateVectors(numBlocks)
+function [xTrain, yTrain, xTest, yTest] = calculateVectors(numBlocks)
     xa = calculateFeatureVectorsForDirectory('GivenImages/TrainSunset', numBlocks);
     xb = calculateFeatureVectorsForDirectory('GivenImages/TrainNonsunsets', numBlocks);
     xc = calculateFeatureVectorsForDirectory('GivenImages/TestSunset', numBlocks);
@@ -9,7 +9,9 @@ function [x, y] = calculateVectors(numBlocks)
     yc = ones(size(xc,1),1);
     yd = -ones(size(xd,1),1);
     
-    x = [xa; xb; xc; xd];
-    y = [ya; yb; yc; yd];
+    xTrain = [xa; xb];
+    xTest = [xc; xd];
+    yTrain = [ya; yb];
+    yTest = [yc; yd];
 end
     
