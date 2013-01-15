@@ -1,18 +1,27 @@
-function vector = calculateFeatureVector(src)
+function vector = calculateFeatureVector(src, numBlocks)
     % Takes in an LST image and returns a set of the 294 feature
     % vectors
-    x_segment = uint32(floor(size(src, 1) / 7));
-    y_segment = uint32(floor(size(src, 2) / 7));
+    x_segment = uint32(floor(size(src, 1) / numBlocks));
+    y_segment = uint32(floor(size(src, 2) / numBlocks));
     
-    vector = zeros(294, 1);
+    vector = zeros(numBlocks*numBlocks*6, 1);
 
-    for i=1:7
-        for j=1:7
-            idx = ((((i - 1) * 7) + j - 1) * 6) + 1;
-            fprintf('Region: %d-%d, %d-%d on %dx%d', (x_segment * (i - 1) + 1), (x_segment * (i)), (y_segment * (j - 1) + 1), (y_segment * j), size(src, 1), size(src, 2));
-            LReg = src((x_segment * (i - 1) + 1):(x_segment * (i)), (y_segment * (j - 1) + 1):(y_segment * j), 1);
-            SReg = src((x_segment * (i - 1) + 1):(x_segment * (i)), (y_segment * (j - 1) + 1):(y_segment * j), 2);
-            TReg = src((x_segment * (i - 1) + 1):(x_segment * (i)), (y_segment * (j - 1) + 1):(y_segment * j), 3);
+    for i=1:numBlocks
+        for j=1:numBlocks
+            idx = ((((i - 1) * numBlocks) + j - 1) * 6) + 1;
+            beginX = (x_segment * (i - 1) + 1);
+            endX = (x_segment * i);
+            beginY = (y_segment * (j - 1) + 1);
+            endY = (y_segment * j);
+            
+            fprintf('Region: %d-%d, %d-%d on %dx%d', beginX, endX, beginY, endY, size(src, 1), size(src, 2));
+            
+            % Separate out the regions for L/S/T bands
+            LReg = src(beginX:endX, beginY:endY, 1);
+            SReg = src(beginX:endX, beginY:endY, 2);
+            TReg = src(beginX:endX, beginY:endY, 3);
+            
+            % Create the vector
             vector(idx) = mean(LReg(:));
             vector(idx + 1) = std(double(LReg(:)));
             vector(idx + 2) = mean(SReg(:));
