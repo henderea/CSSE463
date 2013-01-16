@@ -15,7 +15,7 @@ function [ctp, ctn, cfp, cfn, tpr, fpr, accuracy] = gatherStatistics(testResults
     cfp = size(fp, 1);
     cfn = size(fn, 1);
 
-    ctest = size(yTest, 1);
+    ctest = size(yValues, 1);
 
     tpr = (ctp/(ctp+cfn)) * 100;
     fpr = (cfp/(cfp+ctn)) * 100;
