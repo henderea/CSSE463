@@ -38,8 +38,6 @@ Email: kampernj@rose-hulman.edu and henderea@rose-hulman.edu}
 \maketitle
 % insert page header and footer here for IEEE PDF Compliant
 \thispagestyle{fancy} \fancyhead{} \lhead{}
-\lfoot{978-1-4244-7493-6/10/\$26.00~\copyright2010 IEEE} \cfoot{}
-\rfoot{ICME 2010}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -59,29 +57,22 @@ black ink.
 \end{abstract}
 %
 \begin{keywords}
-One, two, three, four, five
+sunset detector,scene classification,support vector machine,image classification
 \end{keywords}
 %
 \section{Introduction}
 \label{sec:intro}
+For the sunset detector project, we set out to devise an accurate way to classify
+whether a given image is a sunset or not using supervised machine learning techniques.
 
-These guidelines include complete descriptions of the fonts,
-spacing, and related information for producing your proceedings
-manuscripts. Please follow them and if you have any questions,
-direct them to Andy W. H. Khong at \verb"andykhong@ntu.edu.sg" or
-Clara Lee at \verb"elhlee@ntu.edu.sg" .
+Scene classification has several practical applications. One such use is in consumer
+imaging devices to determine the best post-processing steps to deliver a high quality
+image. Another would be automated image sorting based on the scene type (e.g., being 
+able to classify portraits, nature shots, and so on, to categorize them in an album). 
 
-\section{Paper Format}
-\label{sec:format}
-
-All printed material, including text, illustrations, and charts,
-must be kept within a print area of 7 inches (178~mm) wide by 9
-inches (229~mm) high. Do not write or print anything outside the
-print area. The top margin must be 1 inch (25~mm), except for the
-title page, and the left margin must be 0.75 inch (19~mm).  All {\it
-text} must be in a two-column format. Columns are to be 3.39 inches
-(86~mm) wide, with a 0.24 inch (6~mm) space between them. Text must
-be fully justified.
+Scene classification is difficult, even in the binary case that we consider in this
+paper. Certain scenes would be very difficult to classify, as they would share the
+same characteristics, such as hue and brightness features, as other scenes.
 
 \section{Title Page}
 \label{sec:pagestyle}
