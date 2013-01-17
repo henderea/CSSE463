@@ -6,7 +6,7 @@ function [kernel, param] = runSVMTests(xTrain, yTrain, xTest, yTest, polyparams,
         [ctp, ctn, cfp, cfn, tpr, fpr, accuracy] = runSVMTest(oxTrain, yTrain, oxTest, yTest, 'poly', polyparams(i));
         fprintf('Kernel: poly; Param: %.3f\n', polyparams(i));
         fprintf('True positive: %d/%d; True negative: %d/%d; False positive: %d/%d; False negative: %d/%d\n', ctp, ctest, ctn, ctest, cfp, ctest, cfn, ctest);
-        fprintf('TPR: %.2f%%; FPR: %.3f%%; Accuracy: %.3f%%\n\n', tpr, fpr, accuracy);
+        fprintf('TPR: %.2f%%; FPR: %.2f%%; Accuracy: %.2f%%\n\n', tpr, fpr, accuracy);
         if(accuracy > amax)
             amax = accuracy;
             kernel = 'poly';
@@ -17,7 +17,7 @@ function [kernel, param] = runSVMTests(xTrain, yTrain, xTest, yTest, polyparams,
         [ctp, ctn, cfp, cfn, tpr, fpr, accuracy] = runSVMTest(oxTrain, yTrain, oxTest, yTest, 'rbf', rbfparams(i));
         fprintf('Kernel: rbf; Param: %.3f\n', rbfparams(i));
         fprintf('True positive: %d/%d; True negative: %d/%d; False positive: %d/%d; False negative: %d/%d\n', ctp, ctest, ctn, ctest, cfp, ctest, cfn, ctest);
-        fprintf('TPR: %.2f%%; FPR: %.3f%%; Accuracy: %.3f%%\n\n', tpr, fpr, accuracy);
+        fprintf('TPR: %.2f%%; FPR: %.2f%%; Accuracy: %.2f%%\n\n', tpr, fpr, accuracy);
         if(accuracy > amax)
             amax = accuracy;
             kernel = 'rbf';
