@@ -71,7 +71,31 @@ Scene classification is difficult, even in the binary case that we consider in t
 paper. Certain scenes would be very difficult to classify, as they would share the
 same characteristics, such as hue and brightness features, as other scenes.
 
+\section{Problem Description}
+\label{sec:probdesc}
+In this particular scenario, we wanted to develop a classifier that would give a binary
+classification as to whether a scene contained a sunset or not, only using a set of 
+approximately 500 training images.  
+
+\section{Implementation}
+To solve this problem, we started out by implementing a baseline detector. First, we converted the source image to the LST (luminance and chroma) bands. Once in LST, to obtain the feature vector, we split the image into a 7x7 equidistant grid and took the mean and standard deviation of each of the LST bands for each of the 49 regions. This resulted in a 294 dimension feature vector for each image. 
+
+The feature vector was then normalized using the zero-mean and one-standard deviation method. With the 294 dimension normalized training feature vector, we trained an SVM using several different kernels, both polynomial and radial basisfunction kernels, varying the kernel parameter to obtain the best accuracy. 
+
+After training the SVM, we then ran the SVM on a set of test data, obtaining a set of labels. We then normalized those labels using the same zero-mean and one-standard deviation method and used a threshold of 0 to assign integer labels to each image. We compared the results of various kernels and parameters to obtain the best results. 
+
+In an attempt to improve our accuracy, in addition to normalizing the Y1 label values from the SVM, we also tried varying the grid size. However, this technique did not result in any improvements to the accuracy over the baseline 7x7 grid. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{process-image.png}
+\caption{A Sunset Image Split into a 7x7 Grid}
+\label{fig:process-image}
+\end{figure}
+
 \section{Experimental setup and results}
+\label{sec:results}
+
 \subsection{Input}
 \begin{tabular}{ | c | c | c |}
 \hline
@@ -120,7 +144,33 @@ p & TP & TN & FP & FN & TPR & FPR & Acc \\
 \hline
 \end{tabular}
 
+\section{Results of Various Sized Grid Runs}
+\input{Results-Processed.txt}
+
 \subsubsection{Summary}
 The best accuracy came from the Radial Basis Function kernel with \(\sigma\) of 11, 13, and 15.  All three of these had identical accuracies.  The \(\sigma\)s of 11 and 13 were completely identical in their results, but the \(\sigma\) of 15 had one more true positive and one fewer true negative when compared to the other two.
+
+None of the other grid sizes were able to give improved accuracy over the 7x7 grid, even losing accuracy in most cases.
+
+\section{Conclusion}
+We found that a basic technique using a 7x7 grid was able to classify the test set with greater than 94\% accuracy. Our normalization technique for normalizing the Y1 values greatly improved the accuracy of our code without requiring us to do manual threshold adjustments.
+
+\subsection{Misclassifications}
+Our classifier ended up misclassifying several images. The images that were false-positives typically contained hue and intensity values very similar to that of a sunset, such as evident by Figure \ref{fig:fp-1}, while false-negatives typically displayed low intensity values compared to other images in the data set.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{fp-1.png}
+\caption{A non-sunset misclassified as a sunset}
+\label{fig:fp-1}
+\end{figure}
+
+
+\section{Future Work}
+One possible area of future research would be to use other features aside from color to classify against, such as shape, edges, and color gradients.
+
+One area that we would like to investigate in particular is dynamically determining the grid region sizes on an image-by-image basis. In addition, we would also like to investigate the use of irregularly sized grid regions. These regions would be optimized based on the training data and what would provide the smallest standard deviation of values within the region. 
+
+Another area we would also like to investigate would be the possiblity of using multiple SVM models, each trained on a subset of sunset images, and combining the results to increase the accuracy and confidence of our system. 
 
 \end{document}

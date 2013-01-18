@@ -1,0 +1,310 @@
+\subsection{Calculating for block size = 5}
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 223/499; TN: 225/499; FP: 20/499; FN: 31/499
+TPR: 87.80\%; FPR: 8.16\%; Accuracy: 89.78\%
+
+Kernel: poly; Param: 3.000
+TP: 224/499; TN: 238/499; FP: 7/499; FN: 30/499
+TPR: 88.19\%; FPR: 2.86\%; Accuracy: 92.59\%
+
+Kernel: poly; Param: 4.000
+TP: 208/499; TN: 224/499; FP: 21/499; FN: 46/499
+TPR: 81.89\%; FPR: 8.57\%; Accuracy: 86.57\%
+
+Kernel: poly; Param: 5.000
+TP: 208/499; TN: 240/499; FP: 5/499; FN: 46/499
+TPR: 81.89\%; FPR: 2.04\%; Accuracy: 89.78\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 231/499; TN: 231/499; FP: 14/499; FN: 23/499
+TPR: 90.94\%; FPR: 5.71\%; Accuracy: 92.59\%
+
+Kernel: rbf; Param: 7.000
+TP: 235/499; TN: 233/499; FP: 12/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.90\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 9.000
+TP: 234/499; TN: 233/499; FP: 12/499; FN: 20/499
+TPR: 92.13\%; FPR: 4.90\%; Accuracy: 93.59\%
+
+Kernel: rbf; Param: 11.000
+TP: 236/499; TN: 233/499; FP: 12/499; FN: 18/499
+TPR: 92.91\%; FPR: 4.90\%; Accuracy: 93.99\%
+
+Kernel: rbf; Param: 13.000
+TP: 235/499; TN: 232/499; FP: 13/499; FN: 19/499
+TPR: 92.52\%; FPR: 5.31\%; Accuracy: 93.59\%
+
+Kernel: rbf; Param: 15.000
+TP: 235/499; TN: 231/499; FP: 14/499; FN: 19/499
+TPR: 92.52\%; FPR: 5.71\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 17.000
+TP: 235/499; TN: 232/499; FP: 13/499; FN: 19/499
+TPR: 92.52\%; FPR: 5.31\%; Accuracy: 93.59\%
+
+Kernel: rbf; Param: 19.000
+TP: 235/499; TN: 233/499; FP: 12/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.90\%; Accuracy: 93.79\%
+
+\subsection{Calculating for block size = 6}
+
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 217/499; TN: 226/499; FP: 19/499; FN: 37/499
+TPR: 85.43\%; FPR: 7.76\%; Accuracy: 88.78\%
+
+Kernel: poly; Param: 3.000
+TP: 218/499; TN: 238/499; FP: 7/499; FN: 36/499
+TPR: 85.83\%; FPR: 2.86\%; Accuracy: 91.38\%
+
+Kernel: poly; Param: 4.000
+TP: 213/499; TN: 226/499; FP: 19/499; FN: 41/499
+TPR: 83.86\%; FPR: 7.76\%; Accuracy: 87.98\%
+
+Kernel: poly; Param: 5.000
+TP: 210/499; TN: 242/499; FP: 3/499; FN: 44/499
+TPR: 82.68\%; FPR: 1.22\%; Accuracy: 90.58\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 236/499; TN: 230/499; FP: 15/499; FN: 18/499
+TPR: 92.91\%; FPR: 6.12\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 7.000
+TP: 235/499; TN: 233/499; FP: 12/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.90\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 9.000
+TP: 235/499; TN: 234/499; FP: 11/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.49\%; Accuracy: 93.99\%
+
+Kernel: rbf; Param: 11.000
+TP: 235/499; TN: 234/499; FP: 11/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.49\%; Accuracy: 93.99\%
+
+Kernel: rbf; Param: 13.000
+TP: 235/499; TN: 234/499; FP: 11/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.49\%; Accuracy: 93.99\%
+
+Kernel: rbf; Param: 15.000
+TP: 235/499; TN: 235/499; FP: 10/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.08\%; Accuracy: 94.19\%
+
+Kernel: rbf; Param: 17.000
+TP: 234/499; TN: 234/499; FP: 11/499; FN: 20/499
+TPR: 92.13\%; FPR: 4.49\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 19.000
+TP: 235/499; TN: 234/499; FP: 11/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.49\%; Accuracy: 93.99\%
+
+
+\subsection{Calculating for block size = 7}
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 212/499; TN: 226/499; FP: 19/499; FN: 42/499
+TPR: 83.46\%; FPR: 7.76\%; Accuracy: 87.78\%
+
+Kernel: poly; Param: 3.000
+TP: 218/499; TN: 239/499; FP: 6/499; FN: 36/499
+TPR: 85.83\%; FPR: 2.45\%; Accuracy: 91.58\%
+
+Kernel: poly; Param: 4.000
+TP: 211/499; TN: 222/499; FP: 23/499; FN: 43/499
+TPR: 83.07\%; FPR: 9.39\%; Accuracy: 86.77\%
+
+Kernel: poly; Param: 5.000
+TP: 205/499; TN: 240/499; FP: 5/499; FN: 49/499
+TPR: 80.71\%; FPR: 2.04\%; Accuracy: 89.18\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 234/499; TN: 234/499; FP: 11/499; FN: 20/499
+TPR: 92.13\%; FPR: 4.49\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 7.000
+TP: 232/499; TN: 234/499; FP: 11/499; FN: 22/499
+TPR: 91.34\%; FPR: 4.49\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 9.000
+TP: 232/499; TN: 238/499; FP: 7/499; FN: 22/499
+TPR: 91.34\%; FPR: 2.86\%; Accuracy: 94.19\%
+
+Kernel: rbf; Param: 11.000
+TP: 233/499; TN: 237/499; FP: 8/499; FN: 21/499
+TPR: 91.73\%; FPR: 3.27\%; Accuracy: 94.19\%
+
+Kernel: rbf; Param: 13.000
+TP: 234/499; TN: 238/499; FP: 7/499; FN: 20/499
+TPR: 92.13\%; FPR: 2.86\%; Accuracy: 94.59\%
+
+Kernel: rbf; Param: 15.000
+TP: 235/499; TN: 237/499; FP: 8/499; FN: 19/499
+TPR: 92.52\%; FPR: 3.27\%; Accuracy: 94.59\%
+
+Kernel: rbf; Param: 17.000
+TP: 234/499; TN: 237/499; FP: 8/499; FN: 20/499
+TPR: 92.13\%; FPR: 3.27\%; Accuracy: 94.39\%
+
+Kernel: rbf; Param: 19.000
+TP: 234/499; TN: 237/499; FP: 8/499; FN: 20/499
+TPR: 92.13\%; FPR: 3.27\%; Accuracy: 94.39\%
+
+
+\subsection{Calculating for block size = 8}
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 217/499; TN: 223/499; FP: 22/499; FN: 37/499
+TPR: 85.43\%; FPR: 8.98\%; Accuracy: 88.18\%
+
+Kernel: poly; Param: 3.000
+TP: 223/499; TN: 239/499; FP: 6/499; FN: 31/499
+TPR: 87.80\%; FPR: 2.45\%; Accuracy: 92.59\%
+
+Kernel: poly; Param: 4.000
+TP: 221/499; TN: 209/499; FP: 36/499; FN: 33/499
+TPR: 87.01\%; FPR: 14.69\%; Accuracy: 86.17\%
+
+Kernel: poly; Param: 5.000
+TP: 203/499; TN: 241/499; FP: 4/499; FN: 51/499
+TPR: 79.92\%; FPR: 1.63\%; Accuracy: 88.98\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 231/499; TN: 232/499; FP: 13/499; FN: 23/499
+TPR: 90.94\%; FPR: 5.31\%; Accuracy: 92.79\%
+
+Kernel: rbf; Param: 7.000
+TP: 232/499; TN: 230/499; FP: 15/499; FN: 22/499
+TPR: 91.34\%; FPR: 6.12\%; Accuracy: 92.59\%
+
+Kernel: rbf; Param: 9.000
+TP: 233/499; TN: 231/499; FP: 14/499; FN: 21/499
+TPR: 91.73\%; FPR: 5.71\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 11.000
+TP: 232/499; TN: 232/499; FP: 13/499; FN: 22/499
+TPR: 91.34\%; FPR: 5.31\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 13.000
+TP: 233/499; TN: 232/499; FP: 13/499; FN: 21/499
+TPR: 91.73\%; FPR: 5.31\%; Accuracy: 93.19\%
+
+Kernel: rbf; Param: 15.000
+TP: 237/499; TN: 232/499; FP: 13/499; FN: 17/499
+TPR: 93.31\%; FPR: 5.31\%; Accuracy: 93.99\%
+
+Kernel: rbf; Param: 17.000
+TP: 237/499; TN: 231/499; FP: 14/499; FN: 17/499
+TPR: 93.31\%; FPR: 5.71\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 19.000
+TP: 235/499; TN: 230/499; FP: 15/499; FN: 19/499
+TPR: 92.52\%; FPR: 6.12\%; Accuracy: 93.19\%
+
+
+\subsection{Calculating for block size = 9}
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 217/499; TN: 221/499; FP: 24/499; FN: 37/499
+TPR: 85.43\%; FPR: 9.80\%; Accuracy: 87.78\%
+
+Kernel: poly; Param: 3.000
+TP: 223/499; TN: 242/499; FP: 3/499; FN: 31/499
+TPR: 87.80\%; FPR: 1.22\%; Accuracy: 93.19\%
+
+Kernel: poly; Param: 4.000
+TP: 219/499; TN: 209/499; FP: 36/499; FN: 35/499
+TPR: 86.22\%; FPR: 14.69\%; Accuracy: 85.77\%
+
+Kernel: poly; Param: 5.000
+TP: 203/499; TN: 241/499; FP: 4/499; FN: 51/499
+TPR: 79.92\%; FPR: 1.63\%; Accuracy: 88.98\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 236/499; TN: 230/499; FP: 15/499; FN: 18/499
+TPR: 92.91\%; FPR: 6.12\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 7.000
+TP: 234/499; TN: 230/499; FP: 15/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.12\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 9.000
+TP: 234/499; TN: 230/499; FP: 15/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.12\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 11.000
+TP: 234/499; TN: 231/499; FP: 14/499; FN: 20/499
+TPR: 92.13\%; FPR: 5.71\%; Accuracy: 93.19\%
+
+Kernel: rbf; Param: 13.000
+TP: 234/499; TN: 232/499; FP: 13/499; FN: 20/499
+TPR: 92.13\%; FPR: 5.31\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 15.000
+TP: 235/499; TN: 232/499; FP: 13/499; FN: 19/499
+TPR: 92.52\%; FPR: 5.31\%; Accuracy: 93.59\%
+
+Kernel: rbf; Param: 17.000
+TP: 235/499; TN: 233/499; FP: 12/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.90\%; Accuracy: 93.79\%
+
+Kernel: rbf; Param: 19.000
+TP: 235/499; TN: 233/499; FP: 12/499; FN: 19/499
+TPR: 92.52\%; FPR: 4.90\%; Accuracy: 93.79\%
+
+\subsection{Calculating for block size = 10}
+\subsubsection{Polynomial Kernel}
+Kernel: poly; Param: 2.000
+TP: 224/499; TN: 220/499; FP: 25/499; FN: 30/499
+TPR: 88.19\%; FPR: 10.20\%; Accuracy: 88.98\%
+
+Kernel: poly; Param: 3.000
+TP: 225/499; TN: 241/499; FP: 4/499; FN: 29/499
+TPR: 88.58\%; FPR: 1.63\%; Accuracy: 93.39\%
+
+Kernel: poly; Param: 4.000
+TP: 219/499; TN: 205/499; FP: 40/499; FN: 35/499
+TPR: 86.22\%; FPR: 16.33\%; Accuracy: 84.97\%
+
+Kernel: poly; Param: 5.000
+TP: 186/499; TN: 243/499; FP: 2/499; FN: 68/499
+TPR: 73.23\%; FPR: 0.82\%; Accuracy: 85.97\%
+
+\subsubsection{Radial Basis Function Kernel}
+Kernel: rbf; Param: 5.000
+TP: 234/499; TN: 232/499; FP: 13/499; FN: 20/499
+TPR: 92.13\%; FPR: 5.31\%; Accuracy: 93.39\%
+
+Kernel: rbf; Param: 7.000
+TP: 233/499; TN: 230/499; FP: 15/499; FN: 21/499
+TPR: 91.73\%; FPR: 6.12\%; Accuracy: 92.79\%
+
+Kernel: rbf; Param: 9.000
+TP: 234/499; TN: 230/499; FP: 15/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.12\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 11.000
+TP: 234/499; TN: 228/499; FP: 17/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.94\%; Accuracy: 92.59\%
+
+Kernel: rbf; Param: 13.000
+TP: 234/499; TN: 229/499; FP: 16/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.53\%; Accuracy: 92.79\%
+
+Kernel: rbf; Param: 15.000
+TP: 234/499; TN: 229/499; FP: 16/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.53\%; Accuracy: 92.79\%
+
+Kernel: rbf; Param: 17.000
+TP: 234/499; TN: 230/499; FP: 15/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.12\%; Accuracy: 92.99\%
+
+Kernel: rbf; Param: 19.000
+TP: 234/499; TN: 230/499; FP: 15/499; FN: 20/499
+TPR: 92.13\%; FPR: 6.12\%; Accuracy: 92.99\%
+

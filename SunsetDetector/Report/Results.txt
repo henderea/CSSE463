@@ -1,0 +1,317 @@
+Calculating for block size = 5
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 223/499; True negative: 225/499; False positive: 20/499; False negative: 31/499
+TPR: 87.80%; FPR: 8.16%; Accuracy: 89.78%
+
+Kernel: poly; Param: 3.000
+True positive: 224/499; True negative: 238/499; False positive: 7/499; False negative: 30/499
+TPR: 88.19%; FPR: 2.86%; Accuracy: 92.59%
+
+Kernel: poly; Param: 4.000
+True positive: 208/499; True negative: 224/499; False positive: 21/499; False negative: 46/499
+TPR: 81.89%; FPR: 8.57%; Accuracy: 86.57%
+
+Kernel: poly; Param: 5.000
+True positive: 208/499; True negative: 240/499; False positive: 5/499; False negative: 46/499
+TPR: 81.89%; FPR: 2.04%; Accuracy: 89.78%
+
+Kernel: rbf; Param: 5.000
+True positive: 231/499; True negative: 231/499; False positive: 14/499; False negative: 23/499
+TPR: 90.94%; FPR: 5.71%; Accuracy: 92.59%
+
+Kernel: rbf; Param: 7.000
+True positive: 235/499; True negative: 233/499; False positive: 12/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.90%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 9.000
+True positive: 234/499; True negative: 233/499; False positive: 12/499; False negative: 20/499
+TPR: 92.13%; FPR: 4.90%; Accuracy: 93.59%
+
+Kernel: rbf; Param: 11.000
+True positive: 236/499; True negative: 233/499; False positive: 12/499; False negative: 18/499
+TPR: 92.91%; FPR: 4.90%; Accuracy: 93.99%
+
+Kernel: rbf; Param: 13.000
+True positive: 235/499; True negative: 232/499; False positive: 13/499; False negative: 19/499
+TPR: 92.52%; FPR: 5.31%; Accuracy: 93.59%
+
+Kernel: rbf; Param: 15.000
+True positive: 235/499; True negative: 231/499; False positive: 14/499; False negative: 19/499
+TPR: 92.52%; FPR: 5.71%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 17.000
+True positive: 235/499; True negative: 232/499; False positive: 13/499; False negative: 19/499
+TPR: 92.52%; FPR: 5.31%; Accuracy: 93.59%
+
+Kernel: rbf; Param: 19.000
+True positive: 235/499; True negative: 233/499; False positive: 12/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.90%; Accuracy: 93.79%
+
+
+-----
+
+Calculating for block size = 6
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 217/499; True negative: 226/499; False positive: 19/499; False negative: 37/499
+TPR: 85.43%; FPR: 7.76%; Accuracy: 88.78%
+
+Kernel: poly; Param: 3.000
+True positive: 218/499; True negative: 238/499; False positive: 7/499; False negative: 36/499
+TPR: 85.83%; FPR: 2.86%; Accuracy: 91.38%
+
+Kernel: poly; Param: 4.000
+True positive: 213/499; True negative: 226/499; False positive: 19/499; False negative: 41/499
+TPR: 83.86%; FPR: 7.76%; Accuracy: 87.98%
+
+Kernel: poly; Param: 5.000
+True positive: 210/499; True negative: 242/499; False positive: 3/499; False negative: 44/499
+TPR: 82.68%; FPR: 1.22%; Accuracy: 90.58%
+
+Kernel: rbf; Param: 5.000
+True positive: 236/499; True negative: 230/499; False positive: 15/499; False negative: 18/499
+TPR: 92.91%; FPR: 6.12%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 7.000
+True positive: 235/499; True negative: 233/499; False positive: 12/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.90%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 9.000
+True positive: 235/499; True negative: 234/499; False positive: 11/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.49%; Accuracy: 93.99%
+
+Kernel: rbf; Param: 11.000
+True positive: 235/499; True negative: 234/499; False positive: 11/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.49%; Accuracy: 93.99%
+
+Kernel: rbf; Param: 13.000
+True positive: 235/499; True negative: 234/499; False positive: 11/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.49%; Accuracy: 93.99%
+
+Kernel: rbf; Param: 15.000
+True positive: 235/499; True negative: 235/499; False positive: 10/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.08%; Accuracy: 94.19%
+
+Kernel: rbf; Param: 17.000
+True positive: 234/499; True negative: 234/499; False positive: 11/499; False negative: 20/499
+TPR: 92.13%; FPR: 4.49%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 19.000
+True positive: 235/499; True negative: 234/499; False positive: 11/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.49%; Accuracy: 93.99%
+
+----
+
+Calculating for block size = 7
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 212/499; True negative: 226/499; False positive: 19/499; False negative: 42/499
+TPR: 83.46%; FPR: 7.76%; Accuracy: 87.78%
+
+Kernel: poly; Param: 3.000
+True positive: 218/499; True negative: 239/499; False positive: 6/499; False negative: 36/499
+TPR: 85.83%; FPR: 2.45%; Accuracy: 91.58%
+
+Kernel: poly; Param: 4.000
+True positive: 211/499; True negative: 222/499; False positive: 23/499; False negative: 43/499
+TPR: 83.07%; FPR: 9.39%; Accuracy: 86.77%
+
+Kernel: poly; Param: 5.000
+True positive: 205/499; True negative: 240/499; False positive: 5/499; False negative: 49/499
+TPR: 80.71%; FPR: 2.04%; Accuracy: 89.18%
+
+Kernel: rbf; Param: 5.000
+True positive: 234/499; True negative: 234/499; False positive: 11/499; False negative: 20/499
+TPR: 92.13%; FPR: 4.49%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 7.000
+True positive: 232/499; True negative: 234/499; False positive: 11/499; False negative: 22/499
+TPR: 91.34%; FPR: 4.49%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 9.000
+True positive: 232/499; True negative: 238/499; False positive: 7/499; False negative: 22/499
+TPR: 91.34%; FPR: 2.86%; Accuracy: 94.19%
+
+Kernel: rbf; Param: 11.000
+True positive: 233/499; True negative: 237/499; False positive: 8/499; False negative: 21/499
+TPR: 91.73%; FPR: 3.27%; Accuracy: 94.19%
+
+Kernel: rbf; Param: 13.000
+True positive: 234/499; True negative: 238/499; False positive: 7/499; False negative: 20/499
+TPR: 92.13%; FPR: 2.86%; Accuracy: 94.59%
+
+Kernel: rbf; Param: 15.000
+True positive: 235/499; True negative: 237/499; False positive: 8/499; False negative: 19/499
+TPR: 92.52%; FPR: 3.27%; Accuracy: 94.59%
+
+Kernel: rbf; Param: 17.000
+True positive: 234/499; True negative: 237/499; False positive: 8/499; False negative: 20/499
+TPR: 92.13%; FPR: 3.27%; Accuracy: 94.39%
+
+Kernel: rbf; Param: 19.000
+True positive: 234/499; True negative: 237/499; False positive: 8/499; False negative: 20/499
+TPR: 92.13%; FPR: 3.27%; Accuracy: 94.39%
+
+-----
+
+Calculating for block size = 8
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 217/499; True negative: 223/499; False positive: 22/499; False negative: 37/499
+TPR: 85.43%; FPR: 8.98%; Accuracy: 88.18%
+
+Kernel: poly; Param: 3.000
+True positive: 223/499; True negative: 239/499; False positive: 6/499; False negative: 31/499
+TPR: 87.80%; FPR: 2.45%; Accuracy: 92.59%
+
+Kernel: poly; Param: 4.000
+True positive: 221/499; True negative: 209/499; False positive: 36/499; False negative: 33/499
+TPR: 87.01%; FPR: 14.69%; Accuracy: 86.17%
+
+Kernel: poly; Param: 5.000
+True positive: 203/499; True negative: 241/499; False positive: 4/499; False negative: 51/499
+TPR: 79.92%; FPR: 1.63%; Accuracy: 88.98%
+
+Kernel: rbf; Param: 5.000
+True positive: 231/499; True negative: 232/499; False positive: 13/499; False negative: 23/499
+TPR: 90.94%; FPR: 5.31%; Accuracy: 92.79%
+
+Kernel: rbf; Param: 7.000
+True positive: 232/499; True negative: 230/499; False positive: 15/499; False negative: 22/499
+TPR: 91.34%; FPR: 6.12%; Accuracy: 92.59%
+
+Kernel: rbf; Param: 9.000
+True positive: 233/499; True negative: 231/499; False positive: 14/499; False negative: 21/499
+TPR: 91.73%; FPR: 5.71%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 11.000
+True positive: 232/499; True negative: 232/499; False positive: 13/499; False negative: 22/499
+TPR: 91.34%; FPR: 5.31%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 13.000
+True positive: 233/499; True negative: 232/499; False positive: 13/499; False negative: 21/499
+TPR: 91.73%; FPR: 5.31%; Accuracy: 93.19%
+
+Kernel: rbf; Param: 15.000
+True positive: 237/499; True negative: 232/499; False positive: 13/499; False negative: 17/499
+TPR: 93.31%; FPR: 5.31%; Accuracy: 93.99%
+
+Kernel: rbf; Param: 17.000
+True positive: 237/499; True negative: 231/499; False positive: 14/499; False negative: 17/499
+TPR: 93.31%; FPR: 5.71%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 19.000
+True positive: 235/499; True negative: 230/499; False positive: 15/499; False negative: 19/499
+TPR: 92.52%; FPR: 6.12%; Accuracy: 93.19%
+
+----
+
+Calculating for block size = 9
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 217/499; True negative: 221/499; False positive: 24/499; False negative: 37/499
+TPR: 85.43%; FPR: 9.80%; Accuracy: 87.78%
+
+Kernel: poly; Param: 3.000
+True positive: 223/499; True negative: 242/499; False positive: 3/499; False negative: 31/499
+TPR: 87.80%; FPR: 1.22%; Accuracy: 93.19%
+
+Kernel: poly; Param: 4.000
+True positive: 219/499; True negative: 209/499; False positive: 36/499; False negative: 35/499
+TPR: 86.22%; FPR: 14.69%; Accuracy: 85.77%
+
+Kernel: poly; Param: 5.000
+True positive: 203/499; True negative: 241/499; False positive: 4/499; False negative: 51/499
+TPR: 79.92%; FPR: 1.63%; Accuracy: 88.98%
+
+Kernel: rbf; Param: 5.000
+True positive: 236/499; True negative: 230/499; False positive: 15/499; False negative: 18/499
+TPR: 92.91%; FPR: 6.12%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 7.000
+True positive: 234/499; True negative: 230/499; False positive: 15/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.12%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 9.000
+True positive: 234/499; True negative: 230/499; False positive: 15/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.12%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 11.000
+True positive: 234/499; True negative: 231/499; False positive: 14/499; False negative: 20/499
+TPR: 92.13%; FPR: 5.71%; Accuracy: 93.19%
+
+Kernel: rbf; Param: 13.000
+True positive: 234/499; True negative: 232/499; False positive: 13/499; False negative: 20/499
+TPR: 92.13%; FPR: 5.31%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 15.000
+True positive: 235/499; True negative: 232/499; False positive: 13/499; False negative: 19/499
+TPR: 92.52%; FPR: 5.31%; Accuracy: 93.59%
+
+Kernel: rbf; Param: 17.000
+True positive: 235/499; True negative: 233/499; False positive: 12/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.90%; Accuracy: 93.79%
+
+Kernel: rbf; Param: 19.000
+True positive: 235/499; True negative: 233/499; False positive: 12/499; False negative: 19/499
+TPR: 92.52%; FPR: 4.90%; Accuracy: 93.79%
+
+-----
+
+Calculating for block size = 10
+Error reading file GivenImages/TrainSunset/.DS_Store: MATLAB:imagesci:imread:fileFormat: Unable to determine the file format.
+Starting SVM tests...
+Kernel: poly; Param: 2.000
+True positive: 224/499; True negative: 220/499; False positive: 25/499; False negative: 30/499
+TPR: 88.19%; FPR: 10.20%; Accuracy: 88.98%
+
+Kernel: poly; Param: 3.000
+True positive: 225/499; True negative: 241/499; False positive: 4/499; False negative: 29/499
+TPR: 88.58%; FPR: 1.63%; Accuracy: 93.39%
+
+Kernel: poly; Param: 4.000
+True positive: 219/499; True negative: 205/499; False positive: 40/499; False negative: 35/499
+TPR: 86.22%; FPR: 16.33%; Accuracy: 84.97%
+
+Kernel: poly; Param: 5.000
+True positive: 186/499; True negative: 243/499; False positive: 2/499; False negative: 68/499
+TPR: 73.23%; FPR: 0.82%; Accuracy: 85.97%
+
+Kernel: rbf; Param: 5.000
+True positive: 234/499; True negative: 232/499; False positive: 13/499; False negative: 20/499
+TPR: 92.13%; FPR: 5.31%; Accuracy: 93.39%
+
+Kernel: rbf; Param: 7.000
+True positive: 233/499; True negative: 230/499; False positive: 15/499; False negative: 21/499
+TPR: 91.73%; FPR: 6.12%; Accuracy: 92.79%
+
+Kernel: rbf; Param: 9.000
+True positive: 234/499; True negative: 230/499; False positive: 15/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.12%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 11.000
+True positive: 234/499; True negative: 228/499; False positive: 17/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.94%; Accuracy: 92.59%
+
+Kernel: rbf; Param: 13.000
+True positive: 234/499; True negative: 229/499; False positive: 16/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.53%; Accuracy: 92.79%
+
+Kernel: rbf; Param: 15.000
+True positive: 234/499; True negative: 229/499; False positive: 16/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.53%; Accuracy: 92.79%
+
+Kernel: rbf; Param: 17.000
+True positive: 234/499; True negative: 230/499; False positive: 15/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.12%; Accuracy: 92.99%
+
+Kernel: rbf; Param: 19.000
+True positive: 234/499; True negative: 230/499; False positive: 15/499; False negative: 20/499
+TPR: 92.13%; FPR: 6.12%; Accuracy: 92.99%
+
