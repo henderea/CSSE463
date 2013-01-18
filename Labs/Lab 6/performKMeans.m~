@@ -1,0 +1,20 @@
+function [clusters, ptassignments] = performKMeans(k, points, iterations, seed)
+    % Initialize the clusters
+    rand('state', seed);
+    clusters = rand(k,3); 
+    ptassignments = -ones(2, size(points,1));
+    
+    % For the number of iterations...
+    for i=1:iterations
+        for pt=1:size(points, 1)
+            point = points(pt);
+            closest = -1;
+            dist = 
+            for clust=1:k
+                
+            end
+        end
+    end
+
+    
+end
