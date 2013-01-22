@@ -1,3 +1,3 @@
 function dist = calculateDistance(a, b)
-    dist = norm(a - b);
+    dist = norm(double(a) - double(b));
 end
