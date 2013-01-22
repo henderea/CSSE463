@@ -1,7 +1,7 @@
 function [clusters, ptassignments] = performKMeans(k, points, iterations, seed)
     % Initialize the clusters
     rand('state', seed);
-    clusters = rand(k,3)*255; 
+    clusters = rand(k,3)*255
     ptassignments = -ones(size(points, 1), size(points, 2));
     
     % For the number of iterations...
