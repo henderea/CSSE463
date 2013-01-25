@@ -8,7 +8,6 @@ function mtx = loadImages(globPath, px, scale)
         img = imread(fn_path);
         resized = imresize(img, 1/double(scale));
         mtx(:,i-2) = reshape(resized, [], 1);
-
     end
 end
     
